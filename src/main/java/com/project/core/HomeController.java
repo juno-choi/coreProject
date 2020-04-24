@@ -32,6 +32,8 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
+		logger.debug("이건 찍히나");
+		logger.info("이걸로 찍히냐");
 		
 		mainService.selectNum(model);
 		
