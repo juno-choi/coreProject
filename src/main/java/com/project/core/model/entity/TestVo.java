@@ -32,6 +32,20 @@ public class TestVo {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
+
+	@Override
+	public String toString() {
+		return "TestVo [idx=" + idx + ", subject=" + subject + ", content=" + content + ", writer=" + writer + "]";
+	}
+
+	public TestVo(int idx, String subject, String content, String writer) {
+		super();
+		this.idx = idx;
+		this.subject = subject;
+		this.content = content;
+		this.writer = writer;
+	}
+	
 	
 	
 	
