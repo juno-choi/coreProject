@@ -32,7 +32,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="#">이창형</a></li>
-					<li><a href="#">최지은</a></li>
+					<li><a href="/jieun/bbs">최지은</a></li>
 					<li><a href="/test/bbs">최준호</a></li>
 				</ul>
 			</nav>
