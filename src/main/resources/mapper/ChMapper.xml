@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.core.model.ChDao">
+ 
+  <select id="readAllBoard" resultType="com.project.core.model.entity.ChVo">
+	SELECT * FROM CorE.CHLEE;
+  </select>
+  
+  <insert id ="insertBoard">
+		insert into CorE.CHLEE (bname,btitle,bcontent) values ( #{bname} , #{btitle} , #{bcontent})
+  </insert>
+  
+</mapper>
