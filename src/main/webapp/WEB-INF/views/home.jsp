@@ -56,7 +56,9 @@
 					<div class="inner">
 						<header>
 							<h2><a href="generic.html">이창형</a></h2>
-							<p class="info">자신이 하고 싶은 프로젝트 <a href="#">이창형</a></p>
+							<p class="info">자신이 하고 싶은 프로젝트 
+								<a href="${pageContext.request.contextPath}/ch/list">이창형</a>
+							</p>
 						</header>
 						<p>게시판 소개 글</p>
 						<ul class="actions">
