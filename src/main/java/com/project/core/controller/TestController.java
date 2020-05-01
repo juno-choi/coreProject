@@ -25,6 +25,6 @@ public class TestController {
 		logger.debug("왜 안돼");
 		testService.getTestBbs(model);
 		
-		return "test";
+		return "test.tiles";
 	}
 }

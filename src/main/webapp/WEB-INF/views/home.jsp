@@ -108,12 +108,12 @@
 						</header>
 						<p>게시판 소개 글</p>
 						<ul class="actions">
-							<li><a href="generic.html" class="button alt">Read More</a></li>
+							<li><a href="/junho/main" class="button alt">Read More</a></li>
 						</ul>
 					</div>
 					<div class="postnav">
 						<a href="#two" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
-						<a href="#four" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+						<a href="#" class="disabled next"><span class="icon fa-chevron-down"></span></a>
 					</div>
 				</div>
 			</article>
