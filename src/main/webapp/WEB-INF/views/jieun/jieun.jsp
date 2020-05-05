@@ -12,7 +12,7 @@
 <title>LIST</title>
 </head>
 <body>
-<!--  	<table>
+  	<table>
 		<tr>
 			<th>제목</th>
 			<th>내용</th>
@@ -25,7 +25,7 @@
 				<td>${list.writer }</td>
 			</tr>
 		</c:forEach>
-	</table> -->
+	</table> 
 	
 <div>
 	<form>
