@@ -24,8 +24,9 @@ public class ChDaoImpl implements ChDao {
 
 	@Override
 	public ChVo readBoard(int bno) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return sqlSession.selectOne(namespace+".readBoard",bno);
+		
 	}
 
 	@Override

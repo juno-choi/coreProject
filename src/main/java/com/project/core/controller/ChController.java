@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.project.core.model.entity.ChVo;
 import com.project.core.service.ChService;
 
@@ -49,6 +51,13 @@ public class ChController {
 				
 		logger.info("글작성하자");
 		chService.insertBoard(request,response,vo);						
+	}
+	
+	@RequestMapping(value = "/detail", method = RequestMethod.GET)
+	public void detail (@RequestParam("bno") int bno) throws Exception{
+				
+		logger.info("상세페이지 이동");
+		System.out.println(bno);		
 	}
 	
 	

@@ -18,29 +18,7 @@
 	<div class="container">
 		
 		
-			<table class="table table-stripped">
-			<caption>게시판연습</caption>
-			<tr>
-				<th>번호</th>
-				<th>작성자</th>
-				<th>제목</th>
-			</tr>
-			
-		 	<c:forEach items="${list}" var="list">
-				<tr>
-					<td>${list.bno }</td>
-					<td>${list.bname }</td>
-					<td>
-					<a href="${pageContext.request.contextPath}/ch/detail?bno=${list.bno}">${list.btitle} </a>
-					</td> 
-				</tr>
-			</c:forEach> 
-		</table>
-		
-			<p class="text-right"><a
-					href="${pageContext.request.contextPath}/ch/write"
-					class="btn btn-danger">글작성</a>
-			<p>
+
 	</div>
 </body>
 </html>
