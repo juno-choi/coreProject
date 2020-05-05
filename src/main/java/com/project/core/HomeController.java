@@ -39,4 +39,10 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	@RequestMapping(value = "/frontHow")
+	public String frontHow(Locale locale, Model model) {
+		
+		return "frontHow.tiles";
+	}
 }

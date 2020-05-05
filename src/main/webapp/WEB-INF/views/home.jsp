@@ -5,138 +5,426 @@
 
 
 
-<!DOCTYPE HTML>
-<!--
-	Binary by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>CorE</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Core Project </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="/" class="logo"><strong>CorE</strong> Menu</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="#">이창형</a></li>
-					<li><a href="/jieun/bbs">최지은</a></li>
-					<li><a href="/test/bbs">최준호</a></li>
-				</ul>
-			</nav>
+		<!-- CSS here -->
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="assets/css/flaticon.css">
+            <link rel="stylesheet" href="assets/css/slicknav.css">
+            <link rel="stylesheet" href="assets/css/animate.min.css">
+            <link rel="stylesheet" href="assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="assets/css/themify-icons.css">
+            <link rel="stylesheet" href="assets/css/slick.css">
+            <link rel="stylesheet" href="assets/css/nice-select.css">
+            <link rel="stylesheet" href="assets/css/style.css">
+   </head>
 
-		<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<h1>CorE is Corona Virus Every Thing that is info for you </h1>
-					<ul class="actions">
-						<li><a href="#one" class="button alt scrolly big">Continue</a></li>
-					</ul>
-				</div>
-			</section>
+   <body>
+       
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
 
-		<!-- One -->
-			<article id="one" class="post style1">
-				<div class="image">
-					<img src="images/pic14.jpg" alt="" data-position="75% center" />
-				</div>
-				<div class="content">
-					<div class="inner">
-						<header>
-							<h2><a href="generic.html">이창형</a></h2>
-							<p class="info">자신이 하고 싶은 프로젝트 
-								<a href="${pageContext.request.contextPath}/ch/list">이창형</a>
-							</p>
-						</header>
-						<p>게시판 소개 글</p>
-						<ul class="actions">
-							<li><a href="generic.html" class="button alt">Read More</a></li>
-						</ul>
-					</div>
-					<div class="postnav">
-						<a href="#" class="prev disabled"><span class="icon fa-chevron-up"></span></a>
-						<a href="#two" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
-					</div>
-				</div>
-			</article>
-
-		<!-- Two -->
-			<article id="two" class="post invert style1 alt">
-				<div class="image">
-					<img src="images/pic13.jpg" alt="" data-position="10% center" />
-				</div>
-				<div class="content">
-					<div class="inner">
-						<header>
-							<h2><a href="generic.html">최지은</a></h2>
-							<p class="info">자신이 하고 싶은 프로젝트 <a href="#">최지은</a></p>
-						</header>
-						<p>게시판 소개 글</p>
-						<ul class="actions">
-							<li><a href="generic.html" class="button alt">Read More</a></li>
-						</ul>
-					</div>
-					<div class="postnav">
-						<a href="#one" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
-						<a href="#three" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
-					</div>
-				</div>
-			</article>
-
-		<!-- Three -->
-			<article id="three" class="post style2">
-				<div class="image">
-					<img src="images/pic12.jpg" alt="" data-position="80% center" />
-				</div>
-				<div class="content">
-					<div class="inner">
-						<header>
-							<h2><a href="generic.html">최준호</a></h2>
-							<p class="info">자신이 하고 싶은 프로젝트 <a href="#">최준호</a></p>
-						</header>
-						<p>게시판 소개 글</p>
-						<ul class="actions">
-							<li><a href="/junho/main" class="button alt">Read More</a></li>
-						</ul>
-					</div>
-					<div class="postnav">
-						<a href="#two" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
-						<a href="#" class="disabled next"><span class="icon fa-chevron-down"></span></a>
-					</div>
-				</div>
-			</article>
+        <!-- Header Start -->
+       <div class="header-area header-transparrent ">
+            <div class="main-header header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav> 
+                                    <ul id="navigation">    
+                                        <li><a href="${pageContext.request.contextPath}/"> Home</a></li>
+                                        <li><a href="#aboutUs">About Us</a></li>
+                                        <li><a>Portfolio</a>
+                                            <ul class="submenu">
+                                                <li><a href="#portfolio">이창형</a></li>
+                                                <li><a href="#portfolio">최지은</a></li>
+                                                <li><a href="#portfolio">최준호</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="${pageContext.request.contextPath}/frontHow">프론트 사용법</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>             
+                        <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="header-right-btn f-right d-none d-lg-block">
+                                <a href="#" class="btn header-btn">로그인</a>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
 
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-				<div class="copyright">
-					&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-				</div>
-			</footer>
+        <!-- Slider Area Start-->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.png">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-7 col-md-9 ">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s">Core Project<br> Our Project</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".6s">Our Core Project is corona infomation that is for you</p>
+                                    <!-- Hero-btn -->
+                                    <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                        <a href="#aboutUs" class="btn hero-btn">About Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
+                                    <img src="assets/img/hero/hero_right.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider Area End-->
+        <!-- What We do start-->
+        <div id="aboutUs" class="what-we-do we-padding">
+            <div class="container">
+                <!-- Section-tittle -->
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-tittle text-center">
+                            <h2>About Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-do text-center mb-30">
+                            <div class="do-icon">
+                                <span  class="flaticon-tasks"></span>
+                            </div>
+                            <div class="do-caption">
+                                <h4>이창형</h4>
+                                <p>게시판 / 검색기능</p>
+                            </div>
+                            <div class="do-btn">
+                                <a href="${pageContext.request.contextPath}/ch/list"><i class="ti-arrow-right"></i> portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-do text-center mb-30">
+                            <div class="do-icon">
+                                <span  class="flaticon-social-media-marketing"></span>
+                            </div>
+                            <div class="do-caption">
+                                <h4>최지은</h4>
+                                <p>코로나 맵 / 코로나 API 기능</p>
+                            </div>
+                            <div class="do-btn">
+                                <a href="${pageContext.request.contextPath}/jieun/bbs"><i class="ti-arrow-right"></i> portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="single-do text-center mb-30">
+                            <div class="do-icon">
+                                <span  class="flaticon-project"></span>
+                            </div>
+                            <div class="do-caption">
+                                <h4>최준호</h4>
+                                <p>Server / 기타 기능</p>
+                            </div>
+                            <div class="do-btn">
+                                <a href="${pageContext.request.contextPath}/test/bbs"><i class="ti-arrow-right"></i> portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- What We do End-->
+         <!-- Testimonial Start -->
+         <div class="testimonial-area">
+            <div class="container">
+               <div class="testimonial-main">
+                    <!-- Section-tittle -->
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-5  col-md-8 pr-0">
+                            <div class="section-tittle text-center">
+                                <h2>We Say</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                            <div class="col-lg-10 col-md-9">
+                                <div class="h1-testimonial-active">
+                                    <!-- Single Testimonial -->
+                                    <div class="single-testimonial text-center">
+                                        <div class="testimonial-caption ">
+                                            <div class="testimonial-top-cap">
+                                                <p>하고 싶은 말 </p>
+                                            </div>
+                                            <!-- founder -->
+                                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                                <div class="founder-img">
+                                                    <img src="assets/img/testmonial/testimonial.png" alt="">
+                                                </div>
+                                            <div class="founder-text">
+                                                <span>이창형</span>
+                                                <p>게시판 / 검색기능</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- Single Testimonial -->
+                                    <div class="single-testimonial text-center">
+                                        <div class="testimonial-caption ">
+                                            <div class="testimonial-top-cap">
+                                                <p>하고 싶은 말 </p>
+                                            </div>
+                                            <!-- founder -->
+                                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                                <div class="founder-img">
+                                                    <img src="assets/img/testmonial/testimonial.png" alt="">
+                                                </div>
+                                            <div class="founder-text">
+                                                <span>최지은</span>
+                                                <p>코로나 맵 / 코로나 API 기능</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- Single Testimonial -->
+                                    <div class="single-testimonial text-center">
+                                        <div class="testimonial-caption ">
+                                            <div class="testimonial-top-cap">
+                                                <p>프로젝트 진행 잘합시다~~ </p>
+                                            </div>
+                                            <!-- founder -->
+                                            <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                                <div class="founder-img">
+                                                    <img src="assets/img/testmonial/testimonial.png" alt="">
+                                                </div>
+                                            <div class="founder-text">
+                                                <span>최준호</span>
+                                                <p>Server / 기타 기능</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        <!-- Tips Triks Start -->
+        <div id="portfolio" class="tips-triks-area tips-padding">
+            <div class="container">
+                 <!-- Section-tittle -->
+                 <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-8 pr-0">
+                        <div class="section-tittle text-center">
+                            <h2>Our Portfoio Page</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-tips mb-50">
+                            <div class="tips-img">
+                                <img src="assets/img/tips/tips_1.jpg" alt="">
+                            </div>
+                            <div class="tips-caption">
+                                <h4><a href="${pageContext.request.contextPath}/ch/list">이창형</a></h4>
+                                <span>게시판 / 검색기능</span>
+                                <p>April 22, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-tips mb-50">
+                            <div class="tips-img">
+                                <img src="assets/img/tips/tips_2.jpg" alt="">
+                            </div>
+                            <div class="tips-caption">
+                                <h4><a href="${pageContext.request.contextPath}/jieun/bbs">최지은</a></h4>
+                                <span>코로나 맵 / 코로나 API 기능</span>
+                                <p>April 22, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-tips mb-50">
+                            <div class="tips-img">
+                                <img src="assets/img/tips/tips_3.jpg" alt="">
+                            </div>
+                            <div class="tips-caption">
+                                <h4><a href="${pageContext.request.contextPath}/test/bbs">최준호</a></h4>
+                                <span>Server / 기타 기능</span>
+                                <p>April 22, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tips Triks End -->
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+   <footer>
 
-	</body>
+       <!-- Footer Start-->
+      <div class="footer-main" data-background="assets/img/shape/footer_bg.png">
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-3 col-md-4 col-sm-8">
+                       <div class="single-footer-caption mb-50">
+                         <div class="single-footer-caption mb-30">
+                              <!-- logo -->
+                             <div class="footer-logo">
+                                 <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                             </div>
+                             <div class="footer-tittle">
+                                 <div class="footer-pera">
+                                     <p class="info1">Our Emails</p>
+                                     <p class="info2">Our Git-Hub repository</p>
+                                </div>
+                             </div>
+                             <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                            </div>
+                         </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>이창형</h4>
+                                <ul>
+                                    <li><a href="#">이메일</a></li>
+                                    <li><a href="#">깃주소</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-7">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>최지은</h4>
+                                <ul>
+                                    <li><a href="#">이메일</a></li>
+                                    <li><a href="#">깃주소</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>최준호</h4>
+                                <ul>
+                                 <li><a href="#">ililil9482@naver.com</a></li>
+                                 <li><a href="#">깃주소</a></li>
+                             </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom aera -->
+        <div class="footer-bottom-area footer-bg">
+            <div class="container">
+                <div class="footer-border">
+                     <div class="row d-flex align-items-center">
+                         <div class="col-xl-12 ">
+                             <div class="footer-copy-right text-center">
+                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </div>
+       <!-- Footer End-->
+
+   </footer>
+   
+	<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+		<script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        
+    </body>
 </html>
