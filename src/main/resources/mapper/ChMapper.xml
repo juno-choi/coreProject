@@ -12,4 +12,7 @@
 		insert into CorE.CHLEE (bname,btitle,bcontent) values ( #{bname} , #{btitle} , #{bcontent})
   </insert>
   
+  <select id="readBoard" resultType="com.project.core.model.entity.ChVo">
+			select * from CorE.CHLEE where bno = #{bno}
+  </select>
 </mapper>
