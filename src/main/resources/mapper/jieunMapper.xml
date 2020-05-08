@@ -6,4 +6,8 @@
   <select id="selectJieunBbs" resultType="com.project.core.model.entity.JieunVo">
 	SELECT * FROM JIEUN;
   </select>
+  
+  <insert id="insertBoard">
+  		insert into CorE.JIEUN (subject,content,writer) values (#{subject}, #{content}, #{writer})  
+  </insert>
 </mapper>

@@ -14,11 +14,18 @@ public class JieunDaoImpl implements JieunDao{
 
 	@Inject
 	SqlSession sqlSession;
+	private static String namespace ="com.project.core.model.JieunDao";
 	
 	@Override
 	public ArrayList<JieunVo> selectJieunBbs() {
 		
 		return sqlSession.getMapper(JieunDao.class).selectJieunBbs();
+	}
+
+	@Override
+	public int insertBoard(JieunVo vo) {
+		return sqlSession.insert(namespace+".insertBoard", vo);
+		
 	}
 
 }
