@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd
+                                 http://www.springframework.org/schema/security
+                                 http://www.springframework.org/schema/security/spring-security.xsd">
+        
+        <http auto-config="true" use-expressions="true">
+        <!-- 
+			hasRole('role1')
+			권한(role1)을 가지고 있는 경우
+			hasAnyRole('role1', 'role2')
+			권한들(role1, role2) 하나라도 가지고 있을 경우 (갯수는 제한없다)
+			pemitAll
+			권한 있든 말든 모두 접근 가능하다.
+			denyAll
+			권한 있든 말든 모두 접근 불가능하다.
+			isAnonymous()
+			Anonymous 사용자일 경우 (인증을 하지 않은 사용자)
+			isRememberMe()
+			Remember-me 기능으로 로그인한 사용자일 경우
+			isAuthenticated()
+			Anonymous 사용자가 아닐 경우 (인증을 한 사용자)
+			isFullyAuthenticated()
+			Anonymous 사용자가 아니고 Remember-me 기능으로 로그인 하지 않은 사용자 일 경우
+ 		-->
+
+
+            <intercept-url pattern="/test/**" access="hasRole('ROLE_MEMBER')" />
+            <intercept-url pattern="/**" access="permitAll" />
+            <form-login
+            	username-parameter="id"
+            	password-parameter="pw"
+            	login-processing-url="/login"
+            	login-page="/loginPage"
+            	default-target-url="/"
+            />
+        </http>
+        
+        <authentication-manager>
+            <authentication-provider>
+                <user-service>
+                	<!-- 유저 아이디와 비밀번호,규칙을 강제적으로 주입  -->
+                    <user name="user" password="userPw" authorities="ROLE_USER"/>
+                    <user name="test" password="test" authorities="ROLE_MEMBER"/>
+                </user-service>
+            </authentication-provider>
+        </authentication-manager>
+    
+</beans:beans>

@@ -4,7 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
-
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
@@ -77,7 +76,7 @@
                         </div>             
                         <div class="col-xl-2 col-lg-2 col-md-3">
                             <div class="header-right-btn f-right d-none d-lg-block">
-                                <a href="#" class="btn header-btn">로그인</a>
+                                <a href="/login" class="btn header-btn">로그인</a>
                             </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -257,7 +256,7 @@
                  <div class="row d-flex justify-content-center">
                     <div class="col-lg-6 col-md-8 pr-0">
                         <div class="section-tittle text-center">
-                            <h2>Our Portfoio Page</h2>
+                            <h2>Our Portfolio Page</h2>
                         </div>
                     </div>
                 </div>

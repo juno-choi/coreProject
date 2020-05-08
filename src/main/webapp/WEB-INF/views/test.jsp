@@ -15,7 +15,7 @@
 			<div class="single-slider slider-height d-flex align-items-center" data-background="assets/img/hero/h1_hero.png">
 				<div class="container">
 					<div class="row d-flex align-items-center">
-						<div class="col-lg-7 col-md-9 ">
+						<div class="col-lg-12 col-md-12 ">
 							<div class="hero__caption">
 								<table class="table">
 									<tr>
