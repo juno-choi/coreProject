@@ -1,8 +1,11 @@
 package com.project.core.service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +29,16 @@ public class JieunServiceImpl implements JieunService{
 		list = jieunDao.selectJieunBbs();
 		model.addAttribute("jieunBbs",list);
 		
+		
+	}
+
+	@Override
+	public void insertBoard(HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws IOException {
+		response.setContentType("text/html;charset=utf-8");
+		request.setCharacterEncoding("utf-8");
+		jieunDao.insertBoard(vo);
+		
+		response.sendRedirect("/jieun/bbs");
 		
 	}
 }

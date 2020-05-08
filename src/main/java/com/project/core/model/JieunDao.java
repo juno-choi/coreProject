@@ -6,4 +6,7 @@ import com.project.core.model.entity.JieunVo;
 
 public interface JieunDao {
 	ArrayList<JieunVo> selectJieunBbs();
+
+	public int insertBoard(JieunVo vo);
+	
 }
