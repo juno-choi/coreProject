@@ -2,7 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!-- security -->
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
+<sec:authorize>
+	<h5><a href="/loginPage">Login</a> 로그인 사용자가 접속할수 있는 페이지입니다.</h5>
+</sec:authorize>
 
 <!doctype html>
 <html class="no-js" lang="zxx">

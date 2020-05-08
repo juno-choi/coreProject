@@ -14,7 +14,7 @@
                         <h2 class="contact-title">Login</h2>
 				</div>
                     <div class="col-lg-12">
-                        <form class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate" name="f" action="/login">
+                        <form class="form-contact" method="post" novalidate="novalidate" name="f" action="/login">
                             <div class="row">
                             	<div class="col-3">
                             	</div>
@@ -40,14 +40,14 @@
                             	</div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="${_csrf.parameterName}" value="${_crsf.token}">
+                                        <input class="form-control" name="${_csrf.parameterName}" value="${_csrf.token}">
                                     </div>
                                 </div>
 								<div class="col-3">
                             	</div>
                             </div>
                             <div class="form-group mt-12 text-center">
-                                <button class="button button-contactForm boxed-btn">Login</button>
+                                <button type="submit" class="button button-contactForm boxed-btn">Login</button>
                                 <a href="join" class="button button-contactForm boxed-btn">회원가입</a>
                             </div>
                         </form>
