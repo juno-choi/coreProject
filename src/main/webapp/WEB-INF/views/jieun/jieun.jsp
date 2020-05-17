@@ -50,7 +50,15 @@
 							<c:forEach items="${jieunBbs }" var="list">
 								<div class="table-row">
 									<div class="serial">${list.idx }</div>
-									<div class="country">${list.subject }</div>
+									
+									
+									<div class="country">
+									<a href="${pageContext.request.contextPath}/jieun/detail?idx=${list.idx }">
+									${list.subject }
+									</a>
+									</div>
+									
+									
 									<div class="visit">${list.content }</div>
 									<div class="percentage">${list.writer }</div>
 								</div>

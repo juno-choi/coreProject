@@ -8,5 +8,7 @@ public interface JieunDao {
 	ArrayList<JieunVo> selectJieunBbs();
 
 	public int insertBoard(JieunVo vo);
+
+	public JieunVo readBoard(int idx);
 	
 }

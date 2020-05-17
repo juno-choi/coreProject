@@ -10,4 +10,8 @@
   <insert id="insertBoard">
   		insert into CorE.JIEUN (subject,content,writer) values (#{subject}, #{content}, #{writer})  
   </insert>
+  
+  <select id="readBoard" resultType="com.project.core.model.entity.JieunVo">
+  		select * from JIEUN where idx = #{idx};
+  </select>
 </mapper>
