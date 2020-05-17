@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginController {
 
-	@RequestMapping("/loginPage")
+	@RequestMapping(value = "/loginPage")
 	public String login(Model model) {
 		
 		return "junho/loginPage.tiles";
@@ -17,5 +17,10 @@ public class LoginController {
 	public String join(Model model) {
 		
 		return "junho/join.tiles";
+	}
+	
+	@RequestMapping("/access_denied_page")
+	public String accessDeniedPage() throws Exception {
+		return "junho/access_denied_page.tiles";
 	}
 }

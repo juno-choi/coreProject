@@ -50,38 +50,46 @@
     <!-- Preloader Start -->
 
         <!-- Header Start -->
-       <div class="header-area header-transparrent ">
-            <div class="main-header header-sticky">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8">
-                            <!-- Main-menu -->
-                            <div class="main-menu f-right d-none d-lg-block">
-                                <nav> 
-                                    <ul id="navigation">    
-                                        <li><a href="${pageContext.request.contextPath}/"> Home</a></li>
-                                        <li><a href="#aboutUs">About Us</a></li>
-                                        <li><a>Portfolio</a>
-                                            <ul class="submenu">
-                                                <li><a href="#portfolio">이창형</a></li>
-                                                <li><a href="#portfolio">최지은</a></li>
-                                                <li><a href="#portfolio">최준호</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="${pageContext.request.contextPath}/frontHow">프론트 사용법</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>             
+	<div class="header-area header-transparrent ">
+		<div class="main-header header-sticky">
+			<div class="container">
+				<div class="row align-items-center">
+				<!-- Logo -->
+					<div class="col-xl-2 col-lg-2 col-md-1">
+						<div class="logo">
+							<a href="${pageContext.request.contextPath}/"><img src="assets/img/logo/logo.png" alt=""></a>
+						</div>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8">
+						<!-- Main-menu -->
+						<div class="main-menu f-right d-none d-lg-block">
+							<nav> 
+								<ul id="navigation">    
+                                	<li><a href="${pageContext.request.contextPath}/"> Home</a></li>
+									<li><a href="#aboutUs">About Us</a></li>
+                                    <li><a>Portfolio</a>
+                                    	<ul class="submenu">
+                                        	<li><a href="${pageContext.request.contextPath}/ch/list">이창형</a></li>
+                                            	<li><a href="${pageContext.request.contextPath}/jieun/bbs">최지은</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/test/bbs">최준호</a></li>
+										</ul>
+									</li>
+                                    <li><a href="${pageContext.request.contextPath}/frontHow">프론트 사용법</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>             
                         <div class="col-xl-2 col-lg-2 col-md-3">
                             <div class="header-right-btn f-right d-none d-lg-block">
-                                <a href="/login" class="btn header-btn">로그인</a>
+                            	<sec:authorize access="isAnonymous()">
+                                	<a href="/loginPage" class="btn header-btn">로그인</a>
+                                </sec:authorize>
+                                <sec:authorize access="isAuthenticated()">
+	                                <form action="/logout" method="post">
+	                                	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+	                                	<button type="submit" class="btn header-btn">로그아웃</button>
+	                                </form>
+								</sec:authorize>
                             </div>
                         </div>
                         <!-- Mobile Menu -->

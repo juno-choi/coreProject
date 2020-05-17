@@ -37,6 +37,7 @@
             	login-page="/loginPage"
             	default-target-url="/"
             />
+            <access-denied-handler error-page="/access_denied_page"/>
         </http>
         
         <authentication-manager>
