@@ -28,4 +28,12 @@ public class JieunDaoImpl implements JieunDao{
 		
 	}
 
+	@Override
+	public JieunVo readBoard(int idx) {
+		
+		return sqlSession.selectOne(namespace+".readBoard", idx);
+				
+		
+	}
+
 }

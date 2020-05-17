@@ -41,4 +41,16 @@ public class JieunServiceImpl implements JieunService{
 		response.sendRedirect("/jieun/bbs");
 		
 	}
+
+	@Override
+	public void readBoard(Model model, int idx) throws Exception{
+		
+		JieunVo list = jieunDao.readBoard(idx);
+		
+		System.out.println("확인 리스트           "+list);
+		
+		model.addAttribute("jieunBbs", list);
+		
+		
+	}
 }
