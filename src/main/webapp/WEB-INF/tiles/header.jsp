@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- security -->
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html class="no-js" lang="zxx">
     <head>
         <meta charset="utf-8">
@@ -65,7 +67,15 @@
                         </div>             
                         <div class="col-xl-2 col-lg-2 col-md-3">
                             <div class="header-right-btn f-right d-none d-lg-block">
-                                <a href="#" class="btn header-btn">로그인</a>
+                                <sec:authorize access="isAnonymous()">
+                                	<a href="/loginPage" class="btn header-btn">로그인</a>
+                                </sec:authorize>
+                                <sec:authorize access="isAuthenticated()">
+	                                <form action="/logout" method="post">
+	                                	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+	                                	<button type="submit" class="btn header-btn">로그아웃</button>
+	                                </form>
+								</sec:authorize>
                             </div>
                         </div>
                         <!-- Mobile Menu -->

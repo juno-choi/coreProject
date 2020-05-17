@@ -6,6 +6,7 @@
 <head>
 <title>login</title>
 </head>
+
 	<div class="services-area">
 		<div class="container">
 			<!-- Section-tittle -->
@@ -39,8 +40,16 @@
                                 <div class="col-3">
                             	</div>
                                 <div class="col-6">
+                                    <c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION}">
+									    <font color="red">
+										    <span class="mb-1">
+										        ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
+										        <c:remove var="SPRING_SECURITY_LAST_EXCEPTION" scope="session"/>
+										    </span>
+									    </font>
+									</c:if>
                                     <div class="form-group">
-                                        <input class="form-control" name="${_csrf.parameterName}" value="${_csrf.token}">
+                                        <input type="hidden" class="form-control" name="${_csrf.parameterName}" value="${_csrf.token}">
                                     </div>
                                 </div>
 								<div class="col-3">

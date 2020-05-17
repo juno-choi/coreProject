@@ -37,4 +37,15 @@
 		<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 			<property name="dataSource" ref="dataSource"></property>
 		</bean>
+		
+		<!-- spring security message -->
+		<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+			<property name="basenames">
+				<list>
+					<value>/WEB-INF/spring/message/security_message</value>
+				</list>
+			</property>
+			<property name="defaultEncoding" value="UTF-8"/>
+			<property name="cacheSeconds" value="5"/>
+		</bean>
 </beans>
