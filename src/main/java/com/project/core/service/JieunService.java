@@ -13,5 +13,6 @@ public interface JieunService {
 
 	public void getJieunBbs(Model model);
 	public void insertBoard(HttpServletResponse response, HttpServletRequest request, JieunVo vo)throws IOException;
+	public void readBoard(Model model, int idx)throws Exception;
 	
 }
