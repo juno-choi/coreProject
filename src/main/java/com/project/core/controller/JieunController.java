@@ -33,13 +33,13 @@ public class JieunController {
 		return "jieun/jieun.tiles"; //
 	}
 	
-	@RequestMapping(value = "/write", method = RequestMethod.GET)//ÆäÀÌÁö ÀÌµ¿
+	@RequestMapping(value = "/write", method = RequestMethod.GET)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
 	public String write() throws Exception{
 		
 		return "jieun/write.tiles";
 	}
 	
-	@RequestMapping(value = "/write.do", method = RequestMethod.POST)//½ÇÁ¦·Î ±Û¾²´Â°Å //pomÅÂ±×¸¦ »ç¿ëÇÏ¸é post : update, write
+	@RequestMapping(value = "/write.do", method = RequestMethod.POST)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½Â°ï¿½ //pomï¿½Â±×¸ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ post : update, write
 			
 	public void write (HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws Exception {
 		
@@ -55,9 +55,9 @@ public class JieunController {
 //	}
 	
 	@RequestMapping(value = "/detail", method=RequestMethod.GET)
-	public String detail(@RequestParam("idx") int idx, Model model)throws Exception {//modelÀº ¾ÖÆ®¸®ºäÆ® view, ¸®½ºÆ®¿¡ ÀÖ´Â Á¤º¸¸¦ µðÅ×ÀÏ ÆäÀÌÁö·Î °¡Á®¿À±â À§ÇØ ¾´´Ù 
+	public String detail(@RequestParam("idx") int idx, Model model)throws Exception {//modelï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½Æ® view, ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 		
-		System.out.println("È®ÀÎ"+idx);
+		System.out.println("check : "+idx);
 		
 		jieunService.readBoard(model, idx);
 		
