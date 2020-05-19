@@ -47,7 +47,7 @@ public class JieunServiceImpl implements JieunService{
 		
 		JieunVo list = jieunDao.readBoard(idx);
 		
-		System.out.println("확인 리스트           "+list);
+		System.out.println("check : "+list);
 		
 		model.addAttribute("jieunBbs", list);
 		
