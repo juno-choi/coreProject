@@ -53,4 +53,10 @@ public class JieunServiceImpl implements JieunService{
 		
 		
 	}
+
+	@Override
+	public void deleteBoard(int idx) throws Exception {
+		jieunDao.deleteBoard(idx);
+		
+	}
 }

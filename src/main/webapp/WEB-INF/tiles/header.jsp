@@ -44,7 +44,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="index.html"><img src="${pageContext.request.contextPath}/assets/img/logo/logo.png" alt=""></a>
+                                <a href="${pageContext.request.contextPath}/"><img src="${pageContext.request.contextPath}/assets/img/logo/logo.png" alt=""></a><!-- main logo  -->
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-8 col-md-8">

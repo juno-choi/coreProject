@@ -15,7 +15,7 @@
                          <div class="single-footer-caption mb-30">
                               <!-- logo -->
                              <div class="footer-logo">
-                                 <a href="#"><img src="../assets/img/logo/logo2_footer.png" alt=""></a>
+                                 <a href="${pageContext.request.contextPath}/"><img src="../assets/img/logo/logo2_footer.png" alt=""></a>
                              </div>
                              <div class="footer-tittle">
                                  <div class="footer-pera">
@@ -38,7 +38,7 @@
                                 <h4>이창형</h4>
                                 <ul>
                                     <li><a href="#">이메일</a></li>
-                                    <li><a href="#">깃주소</a></li>
+                                    <li><a href="https://github.com/chlee731">https://github.com/chlee731</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                 <h4>최준호</h4>
                                 <ul>
                                  <li><a href="#">ililil9482@naver.com</a></li>
-                                 <li><a href="#">깃주소</a></li>
+                                 <li><a href="https://github.com/juno-choi">https://github.com/juno-choi</a></li>
                              </ul>
                             </div>
                         </div>
