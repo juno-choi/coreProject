@@ -56,7 +56,7 @@
                                 </div>	-->
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">삭제</button>
+                                <button id="delete" type="submit" class="button button-contactForm boxed-btn" onclick="del(${jieunVo.idx})" >삭제</button>
                             </div>
                         </form>
                     </div>
@@ -64,6 +64,17 @@
                 </div>
                 </div>
                 </div>
+                
+<script>
+// 
+function del(idx){
+	var chk = confirm("삭제 하시겠습니까?");
+	if(chk){
+		location.href='delete?idx='+idx;
+	}
+}
+
+</script>
                 
 </body>
 </html>

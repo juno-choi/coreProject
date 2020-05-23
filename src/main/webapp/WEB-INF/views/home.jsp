@@ -350,7 +350,7 @@
                                 <h4>이창형</h4>
                                 <ul>
                                     <li><a href="#">이메일</a></li>
-                                    <li><a href="#">깃주소</a></li>
+                                    <li><a href="https://github.com/chlee731">https://github.com/chlee731</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -360,8 +360,8 @@
                             <div class="footer-tittle">
                                 <h4>최지은</h4>
                                 <ul>
-                                    <li><a href="#">이메일</a></li>
-                                    <li><a href="#">깃주소</a></li>
+                                    <li><a href="#">choijiuen@gmail.com</a></li>
+                                    <li><a href="https://github.com/choijiuen">https://github.com/choijiuen</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -372,7 +372,7 @@
                                 <h4>최준호</h4>
                                 <ul>
                                  <li><a href="#">ililil9482@naver.com</a></li>
-                                 <li><a href="#">깃주소</a></li>
+                                 <li><a href="https://github.com/juno-choi">https://github.com/juno-choi</a></li>
                              </ul>
                             </div>
                         </div>
