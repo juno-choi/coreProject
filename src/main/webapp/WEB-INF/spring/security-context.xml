@@ -28,7 +28,6 @@
  		-->
 
 
-            <intercept-url pattern="/test/**" access="hasRole('ROLE_MEMBER')" />
             <intercept-url pattern="/**" access="permitAll" />
             <form-login
             	username-parameter="id"
@@ -37,18 +36,20 @@
             	login-page="/loginPage"
             	default-target-url="/"
             />
+            <!-- ssl 사용 안하면 ture라는데 왜인지 모르겠음 공부 필요 -->
+            <csrf disabled="true"/>
             <access-denied-handler error-page="/access_denied_page"/>
         </http>
         
-        <authentication-manager>
+        <!-- <authentication-manager>
             <authentication-provider>
                 <user-service>
-                	<!-- 유저 아이디와 비밀번호,규칙을 강제적으로 주입  -->
+                	유저 아이디와 비밀번호,규칙을 강제적으로 주입 
                     <user name="user" password="userPw" authorities="ROLE_USER"/>
                     <user name="test" password="test" authorities="ROLE_MEMBER"/>
                 </user-service>
             </authentication-provider>
-        </authentication-manager>
+        </authentication-manager> -->
         
        <!--  <jdbc-user-service data-source-ref="dataSource" id="userService" users-by-username-query="SELECT ID as loginId, PASSWORD as loginPwd, ENABLED FROM user WHERE ID=?"
     authorities-by-username-query="SELECT ID as loginID, AUTHORITY FROM user WHERE ID=?"/> -->

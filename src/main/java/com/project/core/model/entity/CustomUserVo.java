@@ -61,15 +61,15 @@ public class CustomUserVo implements UserDetails {
 	// 계정 활성화 false == 비활성화 계정
 	@Override
 	public boolean isEnabled() {
-		return true;
+		return ENABLED;
 	}
 
 	public String getNAME() {
 		return NAME;
 	}
 
-	public void setNAME(String nAME) {
-		NAME = nAME;
+	public void setNAME(String name) {
+		NAME = name;
 	}
 
 	public Date getJOINDATE() {
