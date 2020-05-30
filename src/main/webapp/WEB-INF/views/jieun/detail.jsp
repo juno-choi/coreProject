@@ -26,7 +26,7 @@
                     </div>
                     
                     <div class="col-lg-8">
-                        <form action="<%=request.getContextPath()%>/jieun/write.do" id="write" method="post">
+                        
                             <div class="row">
                             	<div class="col-12">
                                     <div class="form-group">
@@ -55,10 +55,13 @@
                                     </div>
                                 </div>	-->
                             </div>
+                            
                             <div class="form-group mt-3">
-                                <button id="delete" type="submit" class="button button-contactForm boxed-btn" onclick="del(${jieunVo.idx})" >삭제</button>
+                                <button id="update" type="button" class="genric-btn success-border e-large" onclick="upd(${jieunBbs.idx})" >수정</button>
+                                <button id="delete" type="button" class="genric-btn danger-border e-large" onclick="del(${jieunBbs.idx})" >삭제</button>
                             </div>
-                        </form>
+                            
+                        
                     </div>
                 </div>
                 </div>
@@ -72,6 +75,12 @@ function del(idx){
 	if(chk){
 		location.href='delete?idx='+idx;
 	}
+}
+
+function upd(idx){
+	
+	location.href='update?idx='+idx;
+	
 }
 
 </script>

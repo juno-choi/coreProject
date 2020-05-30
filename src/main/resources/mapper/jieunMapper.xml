@@ -8,7 +8,7 @@
   </select>
   
   <insert id="insertBoard">
-  		insert into CorE.JIEUN (subject,content,writer) values (#{subject}, #{content}, #{writer})  
+  		insert into JIEUN (subject,content,writer) values (#{subject}, #{content}, #{writer})  
   </insert>
   
   <select id="readBoard" resultType="com.project.core.model.entity.JieunVo">
@@ -18,4 +18,8 @@
   <delete id="deleteBoard" parameterType="int" >
   		DELETE FROM JIEUN WHERE IDX = #{idx};
   </delete>
+  
+  <update id="updateBoard">   <!-- 내용 수정  -->
+      update JIEUN set subject=#{subject} , content = #{content} , writer = #{writer} where idx=#{idx};
+   </update>
 </mapper>
