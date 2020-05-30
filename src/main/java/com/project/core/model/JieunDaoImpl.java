@@ -3,6 +3,8 @@ package com.project.core.model;
 import java.util.ArrayList;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -40,6 +42,13 @@ public class JieunDaoImpl implements JieunDao{
 	public int deleteBoard(int idx) {
 		
 		return sqlSession.delete(namespace+".deleteBoard", idx);
+		
+	}
+
+	@Override
+	public int updateBoard(JieunVo vo) {
+		
+		return sqlSession.update(namespace+".updateBoard", vo);
 		
 	}
 

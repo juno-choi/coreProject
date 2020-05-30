@@ -30,7 +30,7 @@ public class JieunController {
 		
 		jieunService.getJieunBbs(model);
 		
-		return "jieun/jieun.tiles"; //
+		return "jieun/jieun.tiles"; // 
 	}
 	
 	@RequestMapping(value = "/write", method = RequestMethod.GET)//占쏙옙占쏙옙占쏙옙 占싱듸옙
@@ -40,7 +40,6 @@ public class JieunController {
 	}
 	
 	@RequestMapping(value = "/write.do", method = RequestMethod.POST)//占쏙옙占쏙옙占쏙옙 占쌜억옙占승곤옙 //pom占승그몌옙 占쏙옙占쏙옙玖占� post : update, write
-			
 	public void write (HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws Exception {
 		
 		jieunService.insertBoard(response, request,vo);
@@ -60,12 +59,35 @@ public class JieunController {
 	}
 	
 	@RequestMapping(value="/delete", method= RequestMethod.GET)
-	public String delete(@RequestParam("idx") int idx)throws Exception{
+	public void delete(@RequestParam("idx") int idx, HttpServletResponse res)throws Exception{
 		
 		jieunService.deleteBoard(idx);
 		
-		return "jieun/jieun.tiles";
+		res.sendRedirect("bbs");
+
+	}
+	
+	@RequestMapping(value="/update", method= RequestMethod.GET)
+	public String update(@RequestParam("idx") int idx, Model model) throws Exception{
+		
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+idx);
+		
+		jieunService.readBoard(model, idx);
+		
+		return "jieun/update.tiles";
+
+	}
+	
+	@RequestMapping(value = "/update.do", method = RequestMethod.POST)
+	public void update (HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws Exception {
+		
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+vo.getIdx());
+		
+		jieunService.updateBoard(response, request,vo);
 		
 	}
+	
+	
+	
 
 }

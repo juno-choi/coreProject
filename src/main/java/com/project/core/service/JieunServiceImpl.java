@@ -34,8 +34,7 @@ public class JieunServiceImpl implements JieunService{
 
 	@Override
 	public void insertBoard(HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws IOException {
-		response.setContentType("text/html;charset=utf-8");
-		request.setCharacterEncoding("utf-8");
+		
 		jieunDao.insertBoard(vo);
 		
 		response.sendRedirect("/jieun/bbs");
@@ -57,6 +56,15 @@ public class JieunServiceImpl implements JieunService{
 	@Override
 	public void deleteBoard(int idx) throws Exception {
 		jieunDao.deleteBoard(idx);
+		
+	}
+
+	@Override
+	public void updateBoard(HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws Exception {
+		
+		jieunDao.updateBoard(vo);
+		
+		response.sendRedirect("/jieun/bbs");
 		
 	}
 }

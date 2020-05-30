@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>새글작성</title>
+<title>수정페이지</title>
 <style>
 .whole-wrap {
     margin-top: 8%;
@@ -22,25 +22,32 @@
 			<div class="section-top-border">
 	<div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">글 쓰기</h2>
+                        <h2 class="contact-title">수정하기</h2>
                     </div>
                     
                     <div class="col-lg-8">
-                        <form action="<%=request.getContextPath()%>/jieun/write.do" id="write" method="post">
+                        <form action="<%=request.getContextPath()%>/jieun/update.do" id="update" method="post">
                             <div class="row">
                             	<div class="col-12">
+                            	
+                            		<input type="hidden" id="idx" value="${jieunBbs.idx}" name="idx"></input>
+                            		
                                     <div class="form-group">
-                                        <input id="subject" name="subject"  type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                        <input id="subject" value=" ${jieunBbs.subject}" name="subject"  type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
                                     </div>
+                                    
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea id="content" name="content"  cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                        <textarea id="content" name="content"  cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message">
+                                        	 ${jieunBbs.content}
+                                        	
+                                        </textarea>
                                     </div>
                                 </div>
                               <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input id="writer"  name="writer" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                        <input id="writer"  name="writer" value="${jieunBbs.writer}" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
                                     </div>
                                 </div>
                                   <!--
@@ -51,7 +58,7 @@
                                 </div>	-->
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" class="button button-contactForm boxed-btn">수정</button>
                             </div>
                             
                         </form>
