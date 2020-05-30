@@ -40,7 +40,7 @@
 			<div class="section-top-border">
 					<h3 class="mb-30">글 목록</h3>
 					<div class="progress-table-wrap">
-						<div class="progress-table">
+			 			<div class="progress-table">
 							<div class="table-head">
 								<div class="serial">게시글 번호</div>
 								<div class="country">제목</div>
@@ -48,20 +48,18 @@
 								<div class="percentage">작성자</div>
 							</div>
 							<c:forEach items="${jieunBbs }" var="list">
+							<a href="${pageContext.request.contextPath}/jieun/detail?idx=${list.idx }">	
+								
 								<div class="table-row">
 									<div class="serial">${list.idx }</div>
-									
-									
 									<div class="country">
-									<a href="${pageContext.request.contextPath}/jieun/detail?idx=${list.idx }">
 									${list.subject }
-									</a>
 									</div>
-									
-									
 									<div class="visit">${list.content }</div>
 									<div class="percentage">${list.writer }</div>
 								</div>
+								
+							</a>
 							</c:forEach>
 						</div>
 					</div>

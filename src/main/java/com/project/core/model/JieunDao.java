@@ -10,5 +10,7 @@ public interface JieunDao {
 	public int insertBoard(JieunVo vo);
 
 	public JieunVo readBoard(int idx);
+
+	public int deleteBoard(int idx);
 	
 }

@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.core.model.entity.JieunVo;
 import com.project.core.service.JieunService;
@@ -27,35 +28,26 @@ public class JieunController {
 	@RequestMapping("/bbs")
 	public String bbs(Model model) {
 		
-		Logger.debug("");
 		jieunService.getJieunBbs(model);
 		
 		return "jieun/jieun.tiles"; //
 	}
 	
-	@RequestMapping(value = "/write", method = RequestMethod.GET)//������ �̵�
+	@RequestMapping(value = "/write", method = RequestMethod.GET)//占쏙옙占쏙옙占쏙옙 占싱듸옙
 	public String write() throws Exception{
 		
 		return "jieun/write.tiles";
 	}
 	
-	@RequestMapping(value = "/write.do", method = RequestMethod.POST)//������ �۾��°� //pom�±׸� ����ϸ� post : update, write
+	@RequestMapping(value = "/write.do", method = RequestMethod.POST)//占쏙옙占쏙옙占쏙옙 占쌜억옙占승곤옙 //pom占승그몌옙 占쏙옙占쏙옙玖占� post : update, write
 			
 	public void write (HttpServletResponse response, HttpServletRequest request, JieunVo vo) throws Exception {
 		
 		jieunService.insertBoard(response, request,vo);
 	}
 	
-//	@RequestMapping(value="/delete")
-//	public String delete(HttpServletRequest request, HttpServletResponse response, JieunVo vo) {
-//		
-//		jieunService.deleteBoard(vo.getIdx());
-//		
-//		return "jieun/jieun.tiles";
-//	}
-	
 	@RequestMapping(value = "/detail", method=RequestMethod.GET)
-	public String detail(@RequestParam("idx") int idx, Model model)throws Exception {//model�� ��Ʈ����Ʈ view, ����Ʈ�� �ִ� ������ ������ �������� �������� ���� ���� 
+	public String detail(@RequestParam("idx") int idx, Model model)throws Exception {//model占쏙옙 占쏙옙트占쏙옙占쏙옙트 view, 占쏙옙占쏙옙트占쏙옙 占쌍댐옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙 
 		
 		System.out.println("check : "+idx);
 		
@@ -65,6 +57,14 @@ public class JieunController {
 		
 		return "jieun/detail.tiles";
 		
+	}
+	
+	@RequestMapping(value="/delete", method= RequestMethod.GET)
+	public String delete(@RequestParam("idx") int idx)throws Exception{
+		
+		jieunService.deleteBoard(idx);
+		
+		return "jieun/jieun.tiles";
 		
 	}
 

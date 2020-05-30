@@ -36,4 +36,11 @@ public class JieunDaoImpl implements JieunDao{
 		
 	}
 
+	@Override
+	public int deleteBoard(int idx) {
+		
+		return sqlSession.delete(namespace+".deleteBoard", idx);
+		
+	}
+
 }
