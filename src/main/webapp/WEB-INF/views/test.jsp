@@ -19,7 +19,7 @@
 							<div class="hero__caption">
 								<table class="table">
 									<tr>
-										<th>제목</th>
+										<th>제목2222</th>
 										<th>내용</th>
 										<th>작성자</th>
 									</tr>
@@ -31,6 +31,7 @@
 										</tr>
 									</c:forEach>
 								</table>
+								<a href="/junho/chat" style="color: black;">채팅방가기</a>
 							</div>
 						</div>
 					</div>

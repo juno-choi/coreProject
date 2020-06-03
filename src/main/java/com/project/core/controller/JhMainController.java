@@ -16,9 +16,9 @@ public class JhMainController {
 	@Inject
 	JhMainService jhMainService;
 	
-	@RequestMapping("main")
+	@RequestMapping("chat")
 	public String main(Model model, ModelAndView mv) {
 		
-		return "junho/main.tiles";
+		return "junho/chat.tiles";
 	}
 }
