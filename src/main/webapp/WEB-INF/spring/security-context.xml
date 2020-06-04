@@ -28,7 +28,7 @@
  		-->
 
 
-            <intercept-url pattern="/test/**" access="hasRole('ROLE_MEMBER')" />
+            <intercept-url pattern="/jieun/**" access="hasRole('ROLE_MEMBER')" />
             <intercept-url pattern="/**" access="permitAll" />
             <form-login
             	username-parameter="id"
