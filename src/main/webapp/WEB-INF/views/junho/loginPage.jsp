@@ -2,11 +2,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.security.SecureRandom" %>
+<%@ page import="java.math.BigInteger" %>
 <html class="no-js" lang="zxx">
 <head>
 <title>login</title>
 </head>
-
+<body>
+	<!--Naver Login  -->
+	<%
+    String clientId = "U0vaVQuie7jWIBrNfTcP";//애플리케이션 클라이언트 아이디값";
+    String redirectURI = URLEncoder.encode("http://localhost:8080/jieun/bbs", "UTF-8");
+    SecureRandom random = new SecureRandom();
+    String state = new BigInteger(130, random).toString();
+    String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
+    apiURL += "&client_id=" + clientId;
+    apiURL += "&redirect_uri=" + redirectURI;
+    apiURL += "&state=" + state;
+    session.setAttribute("state", state);
+ %>
 	<div class="services-area">
 		<div class="container">
 			<!-- Section-tittle -->
@@ -58,11 +73,16 @@
                             <div class="form-group mt-12 text-center">
                                 <button type="submit" class="button button-contactForm boxed-btn">Login</button>
                                 <a href="join" class="button button-contactForm boxed-btn">회원가입</a>
+                                 <a href="<%=apiURL%>"><img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
                             </div>
                         </form>
                     </div>
 			</div>
 		</div>
 	</div>
+	
+	
+ 
+</body>
 </html>
 
