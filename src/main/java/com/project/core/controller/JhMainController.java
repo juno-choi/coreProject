@@ -19,13 +19,16 @@ public class JhMainController {
 	@Inject
 	JhMainService jhMainService;
 	
+	int cnt = 1;
+	
 	@RequestMapping("chat")
 	public String main(Model model, ModelAndView mv, Principal principal) throws Exception {
 		try {
 			String user_name = CustomUserService.getUserId();
 			model.addAttribute("userName",user_name);
 		}catch(Exception e) {
-			
+			model.addAttribute("userName","guest"+cnt);
+			cnt++;
 		}
 		return "junho/chat.tiles";
 	}
