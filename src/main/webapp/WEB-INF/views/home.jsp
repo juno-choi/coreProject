@@ -33,7 +33,9 @@
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
    </head>
-
+   	<!-- sweetalert2 -->
+	<script src="/sweetalert2/sweetalert2.js"></script>
+	
    <body>
        
     <!-- Preloader Start -->

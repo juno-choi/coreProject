@@ -23,6 +23,9 @@
             <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
             <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
    </head>
+   <!-- sweetalert2 -->
+   <script src="/sweetalert2/sweetalert2.js"></script>
+   
          <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">

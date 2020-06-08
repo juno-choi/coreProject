@@ -33,7 +33,7 @@ public class CustomUserVo implements UserDetails {
 		return PASSWORD;
 	}
 
-	// 사용자 이름
+	// 사용자 id
 	@Override
 	public String getUsername() {
 		return ID;
