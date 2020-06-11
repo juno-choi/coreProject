@@ -28,6 +28,7 @@
  		-->
 
 
+            <intercept-url pattern="/junho/chat" access="hasRole('ROLE_MEMBER')" />
             <intercept-url pattern="/jieun/**" access="hasRole('ROLE_MEMBER')" />
             <intercept-url pattern="/**" access="permitAll" />
             <form-login

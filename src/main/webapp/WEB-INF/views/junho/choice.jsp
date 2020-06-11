@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LIST</title>
+<title>Choice</title>
 </head>
 <body>
 	<!-- Slider Area Start-->
@@ -17,21 +17,8 @@
 					<div class="row d-flex align-items-center">
 						<div class="col-lg-12 col-md-12 ">
 							<div class="hero__caption">
-								<table class="table">
-									<tr>
-										<th>제목2222</th>
-										<th>내용</th>
-										<th>작성자</th>
-									</tr>
-									<c:forEach items="${testBbs }" var="list">
-										<tr>
-											<td>${list.subject }</td>
-											<td>${list.content }</td>
-											<td>${list.writer }</td>
-										</tr>
-									</c:forEach>
-								</table>
-								<a href="/junho/chat" style="color: black;">채팅방가기</a>
+								<a href="/junho/chat" class="genric-btn primary-border e-large">채팅방가기</a>
+								<a href="#" class="genric-btn primary-border e-large">게임하러 가기</a>
 							</div>
 						</div>
 					</div>

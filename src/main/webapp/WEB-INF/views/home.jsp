@@ -73,7 +73,7 @@
                                     	<ul class="submenu">
                                         	<li><a href="${pageContext.request.contextPath}/ch/list">이창형</a></li>
                                             	<li><a href="${pageContext.request.contextPath}/jieun/bbs">최지은</a></li>
-                                                <li><a href="${pageContext.request.contextPath}/test/bbs">최준호</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/junho/choice">최준호</a></li>
 										</ul>
 									</li>
                                     <li><a href="${pageContext.request.contextPath}/frontHow">프론트 사용법</a></li>
@@ -182,7 +182,7 @@
                                 <p>Server / 기타 기능</p>
                             </div>
                             <div class="do-btn">
-                                <a href="${pageContext.request.contextPath}/test/bbs"><i class="ti-arrow-right"></i> portfolio</a>
+                                <a href="${pageContext.request.contextPath}/junho/choice"><i class="ti-arrow-right"></i> portfolio</a>
                             </div>
                         </div>
                     </div>
@@ -306,7 +306,7 @@
                                 <img src="assets/img/tips/tips_3.jpg" alt="">
                             </div>
                             <div class="tips-caption">
-                                <h4><a href="${pageContext.request.contextPath}/test/bbs">최준호</a></h4>
+                                <h4><a href="${pageContext.request.contextPath}/junho/choice">최준호</a></h4>
                                 <span>Server / 기타 기능</span>
                                 <p>April 22, 2020</p>
                             </div>
