@@ -34,8 +34,8 @@ public class LoginController {
 	
 	@RequestMapping(value = "/personalInfo")
 	public void personalInfo(HttpServletRequest request) throws Exception {
-	        String token = "AAAAOD-qZze84nq9XI7lNLBKRv04-i120f6XlJ7gz-Kecu3OYyl_M8TQzboBUSGiyJJ4hHBPfm0MFSc_fsoSy4mS4bI";// 네이버 로그인 접근 토큰; 여기에 복사한 토큰값을 넣어줍니다.
-	        String header = "Bearer " + token; // Bearer 다음에 공백 추가
+	        String token = "AAAAOD-qZze84nq9XI7lNLBKRv04-i120f6XlJ7gz-Kecu3OYyl_M8TQzboBUSGiyJJ4hHBPfm0MFSc_fsoSy4mS4bI";
+	        String header = "Bearer " + token; // Bearer
 	        try {
 	            String apiURL = "https://openapi.naver.com/v1/nid/me";
 	            URL url = new URL(apiURL);
@@ -44,9 +44,9 @@ public class LoginController {
 	            con.setRequestProperty("Authorization", header);
 	            int responseCode = con.getResponseCode();
 	            BufferedReader br;
-	            if(responseCode==200) { // 정상 호출
+	            if(responseCode==200) { //
 	                br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-	            } else {  // 에러 발생
+	            } else {  //
 	                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 	            }
 	            String inputLine;
