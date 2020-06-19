@@ -61,7 +61,7 @@ public class LoginController {
 	        }
 	}
 
-	
+	//한글넣었음	
 	@RequestMapping("/access_denied_page")
 	public String accessDeniedPage() throws Exception {
 		return "junho/access_denied_page.tiles";
