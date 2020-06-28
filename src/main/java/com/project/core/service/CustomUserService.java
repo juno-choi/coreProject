@@ -31,7 +31,7 @@ public class CustomUserService implements UserDetailsService{
 		
 		CustomUserVo user = (CustomUserVo) authentication.getPrincipal();
 		
-		return user.getNAME();
+		return user.getUSERNAME();
 	}
 
 }

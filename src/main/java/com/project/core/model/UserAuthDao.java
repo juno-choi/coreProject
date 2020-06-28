@@ -13,7 +13,20 @@ public class UserAuthDao {
 	@Inject
 	private SqlSession sqlSession;
 	
-	public CustomUserVo getUserById(String username) {
-		return sqlSession.selectOne("user.selectUserById", username);
+	public CustomUserVo getUserById(String id) {
+		return sqlSession.selectOne("user.selectUserById", id);
+	}
+	
+	public CustomUserVo getUserByUserName(String username) {
+		return sqlSession.selectOne("user.selectUserByUserName", username);
+	}
+	
+	public int insertNormalUser(CustomUserVo vo) {
+		return sqlSession.insert("user.insertNormalUser", vo);
+		
+	}
+	
+	public CustomUserVo getSnsUserBySnsId(CustomUserVo vo) {
+		return sqlSession.selectOne("user.selectSnsUserBySnsId", vo);
 	}
 }

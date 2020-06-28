@@ -3,8 +3,47 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="user">
+<!--  
  	<select id="selectUserById" resultType="com.project.core.model.entity.CustomUserVo">
  		SELECT * FROM user WHERE ID = #{loginId}
  	</select>
-  
+-->
+ 	
+ <!-- 회원 가입 및 회원정보 조회 SQL --> 
+ 	  <select id="selectUserById" resultType="com.project.core.model.entity.CustomUserVo">
+	    select id, username, password, email, nickname, mobile from users
+	    where id = #{id}
+	  </select>
+ 	
+	  <select id="selectUserByUserName" resultType="com.project.core.model.entity.CustomUserVo">
+	    select id, username, password, email, nickname, mobile from users
+	    where username = #{userName}
+	  </select>
+<!--    
+	  <insert id="insertNormalUser" parameterType="User">
+	    insert into  users(username, password, email, nickname, mobile, create_date, modify_date )
+	      values  (#{userName}, #{password},#{email}, #{nickName}, #{mobile}, now(), now())
+	    <selectKey resultType="int" keyProperty="id" order="AFTER">
+	      SELECT LAST_INSERT_ID()
+	    </selectKey>
+	  </insert>
+ 	
+	  <select id="selectSnsUserBySnsId" resultMap="snsUserResultMap">
+	    select a.username,
+	    a.email,
+	    a.nickname,
+	    a.create_date,
+	    a.modify_date,
+	    b.sns_id,
+	    b.sns_type,
+	    b.sns_name,
+	    b.sns_profile,
+	    b.sns_connect_date
+	    from users a,
+	    sns_info b
+	    where
+	    a.id = b.id
+	    AND b.sns_id = #{snsId}
+	  </select>
+-->	
 </mapper>
