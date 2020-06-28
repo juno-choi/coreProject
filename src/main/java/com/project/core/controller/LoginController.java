@@ -38,8 +38,8 @@ public class LoginController {
 	@RequestMapping(value = "/callback")
 	public void callback(HttpServletRequest request,HttpServletResponse response , Model model) throws UnsupportedEncodingException {
 		
-		 String clientId = "U0vaVQuie7jWIBrNfTcP";//¾ÖÇÃ¸®ÄÉÀÌ¼Ç Å¬¶óÀÌ¾ğÆ® ¾ÆÀÌµğ°ª";
-		    String clientSecret = "FQdzaZ5Gx4";//¾ÖÇÃ¸®ÄÉÀÌ¼Ç Å¬¶óÀÌ¾ğÆ® ½ÃÅ©¸´°ª";
+		 String clientId = "U0vaVQuie7jWIBrNfTcP";//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½Ìµï¿½";
+		    String clientSecret = "FQdzaZ5Gx4";//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½";
 		    String code = request.getParameter("code");
 		    String state = request.getParameter("state");
 		    String redirectURI = URLEncoder.encode("http://localhost:8080/callback", "UTF-8");
@@ -62,9 +62,9 @@ public class LoginController {
 		      int responseCode = con.getResponseCode();
 		      BufferedReader br;
 		      System.out.print("responseCode="+responseCode);
-		      if(responseCode==200) { // Á¤»ó È£Ãâ
+		      if(responseCode==200) { // ï¿½ï¿½ï¿½ È£ï¿½ï¿½
 		        br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-		      } else {  // ¿¡·¯ ¹ß»ı
+		      } else {  // ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½
 		        br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 		      }
 		      String inputLine;
@@ -73,7 +73,7 @@ public class LoginController {
 		        res.append(inputLine);
 		      }
 		      br.close();
-		      if(responseCode==200) { //¿À·ù ¾øÀÌ Á¤»óÀÛµ¿ ÇßÀ» ¶§ 
+		      if(responseCode==200) { //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ûµï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ 
 		    	  System.out.println(res);
 		    	  
 		    	  JsonParser parsing = new JsonParser();
@@ -94,10 +94,12 @@ public class LoginController {
 		
 	}
 	
+
 	
 	public void personalInfo(String token, HttpServletResponse res2) throws Exception {
 		
-	        String header = "Bearer " + token; // Bearer ´ÙÀ½¿¡ °ø¹é Ãß°¡
+	        String header = "Bearer " + token; // Bearer ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+
 	        try {
 	            String apiURL = "https://openapi.naver.com/v1/nid/me";
 	            URL url = new URL(apiURL);
@@ -106,9 +108,9 @@ public class LoginController {
 	            con.setRequestProperty("Authorization", header);
 	            int responseCode = con.getResponseCode();
 	            BufferedReader br;
-	            if(responseCode==200) { // Á¤»ó È£Ãâ
+	            if(responseCode==200) { //
 	                br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-	            } else {  // ¿¡·¯ ¹ß»ı
+	            } else {  //
 	                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 	            }
 	            String inputLine;
@@ -120,7 +122,7 @@ public class LoginController {
 	            System.out.println(response.toString());
 	            
 	            CustomUserVo vo = new CustomUserVo();
-	            // DB¿¡ Á¤º¸ ÀúÀåÇÏ±â 
+	            // DBï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ 
 	            vo.setUSERNAME("Jieun");
 	            
 	            ArrayList<SimpleGrantedAuthority> authorities = new ArrayList<>();
@@ -139,7 +141,7 @@ public class LoginController {
 	
 	
 
-	
+	//í•œê¸€ë„£ì—ˆìŒ	
 	@RequestMapping("/access_denied_page")
 	public String accessDeniedPage() throws Exception {
 		return "junho/access_denied_page.tiles";
