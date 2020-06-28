@@ -62,7 +62,7 @@ public class LoginController {
 		      int responseCode = con.getResponseCode();
 		      BufferedReader br;
 		      System.out.print("responseCode="+responseCode);
-		      if(responseCode==200) { // ��� ȣ��
+		      if(responseCode==200) { // ���� ȣ��
 		        br = new BufferedReader(new InputStreamReader(con.getInputStream()));
 		      } else {  // ���� �߻�
 		        br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
@@ -73,7 +73,7 @@ public class LoginController {
 		        res.append(inputLine);
 		      }
 		      br.close();
-		      if(responseCode==200) { //��� ���� ����۵� ��� �� 
+		      if(responseCode==200) { //���� ���� �����۵� ���� �� 
 		    	  System.out.println(res);
 		    	  
 		    	  JsonParser parsing = new JsonParser();
@@ -94,12 +94,10 @@ public class LoginController {
 		
 	}
 	
-
 	
 	public void personalInfo(String token, HttpServletResponse res2) throws Exception {
 		
-	        String header = "Bearer " + token; // Bearer ����� ��� �߰�
-
+	        String header = "Bearer " + token; // Bearer ������ ���� �߰�
 	        try {
 	            String apiURL = "https://openapi.naver.com/v1/nid/me";
 	            URL url = new URL(apiURL);
@@ -108,9 +106,9 @@ public class LoginController {
 	            con.setRequestProperty("Authorization", header);
 	            int responseCode = con.getResponseCode();
 	            BufferedReader br;
-	            if(responseCode==200) { //
+	            if(responseCode==200) { // ���� ȣ��
 	                br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-	            } else {  //
+	            } else {  // ���� �߻�
 	                br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 	            }
 	            String inputLine;
@@ -122,7 +120,7 @@ public class LoginController {
 	            System.out.println(response.toString());
 	            
 	            CustomUserVo vo = new CustomUserVo();
-	            // DB�� ��� �����ϱ� 
+	            // DB�� ���� �����ϱ� 
 	            vo.setUSERNAME("Jieun");
 	            
 	            ArrayList<SimpleGrantedAuthority> authorities = new ArrayList<>();
@@ -141,7 +139,7 @@ public class LoginController {
 	
 	
 
-	//한글넣었음	
+	
 	@RequestMapping("/access_denied_page")
 	public String accessDeniedPage() throws Exception {
 		return "junho/access_denied_page.tiles";
