@@ -13,14 +13,18 @@
 	<!--Naver Login  -->
 	<%
     String clientId = "U0vaVQuie7jWIBrNfTcP";//애플리케이션 클라이언트 아이디값";
-    String redirectURI = URLEncoder.encode("http://localhost:8080/callback", "UTF-8");
+    String redirectURI = URLEncoder.encode("http://coreproject.cf/callback", "UTF-8");
+    
     SecureRandom random = new SecureRandom();
     String state = new BigInteger(130, random).toString();
+    
     String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
     apiURL += "&client_id=" + clientId;
     apiURL += "&redirect_uri=" + redirectURI;
     apiURL += "&state=" + state;
     session.setAttribute("state", state);
+    
+    
  %>
 	<div class="services-area">
 		<div class="container">

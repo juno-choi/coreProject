@@ -165,7 +165,7 @@
                             </div>
                             <div class="do-caption">
                                 <h4>최지은</h4>
-                                <p>코로나 맵 / 코로나 API 기능</p>
+                                <p>게시판 / 네이버아이디로로그인 </p>
                             </div>
                             <div class="do-btn">
                                 <a href="${pageContext.request.contextPath}/jieun/bbs"><i class="ti-arrow-right"></i> portfolio</a>
