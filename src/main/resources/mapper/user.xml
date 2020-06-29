@@ -11,15 +11,15 @@
  	
  <!-- 회원 가입 및 회원정보 조회 SQL --> 
  	  <select id="selectUserById" resultType="com.project.core.model.entity.CustomUserVo">
-	    select id, username, password, email, nickname, mobile from users
-	    where id = #{id}
+	    select * from USERS
+	    where email = #{email}
 	  </select>
- 	
+  	
 	  <select id="selectUserByUserName" resultType="com.project.core.model.entity.CustomUserVo">
-	    select id, username, password, email, nickname, mobile from users
+	    select * from USERS
 	    where username = #{userName}
 	  </select>
-<!--    
+ <!--  
 	  <insert id="insertNormalUser" parameterType="User">
 	    insert into  users(username, password, email, nickname, mobile, create_date, modify_date )
 	      values  (#{userName}, #{password},#{email}, #{nickName}, #{mobile}, now(), now())
