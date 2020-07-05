@@ -19,6 +19,8 @@
 	    select * from USERS
 	    where username = #{userName}
 	  </select>
+	  
+
  <!--  
 	  <insert id="insertNormalUser" parameterType="User">
 	    insert into  users(username, password, email, nickname, mobile, create_date, modify_date )

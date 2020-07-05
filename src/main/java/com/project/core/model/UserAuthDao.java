@@ -11,7 +11,7 @@ import com.project.core.model.entity.CustomUserVo;
 public class UserAuthDao {
 	
 	@Inject
-	private SqlSession sqlSession;
+	private SqlSession sqlSession; //private static SqlSession sqlSession; // static 넣어주면 로그인 안됨 
 	
 	public CustomUserVo getUserById(String id) {
 		return sqlSession.selectOne("user.selectUserById", id);
@@ -29,4 +29,9 @@ public class UserAuthDao {
 	public CustomUserVo getSnsUserBySnsId(CustomUserVo vo) {
 		return sqlSession.selectOne("user.selectSnsUserBySnsId", vo);
 	}
+
+
+
+	
+	
 }
