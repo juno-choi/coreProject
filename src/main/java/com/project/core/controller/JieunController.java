@@ -87,6 +87,17 @@ public class JieunController {
 		
 	}
 	
+	@RequestMapping(value="/chat")//USERS DB
+	public String chat (Model model)throws Exception {
+		
+		jieunService.initChat(model);
+		
+		return "jieun/chat.tiles";
+	}
+	
+	
+	
+	
 	
 	
 

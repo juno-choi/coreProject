@@ -1,5 +1,7 @@
 package com.project.core.service;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import com.project.core.model.JieunDao;
+import com.project.core.model.UserAuthDao;
+import com.project.core.model.entity.CustomUserVo;
 import com.project.core.model.entity.JieunVo;
 
 @Service
@@ -67,4 +71,15 @@ public class JieunServiceImpl implements JieunService{
 		response.sendRedirect("/jieun/bbs");
 		
 	}
+
+
+	@Override
+	public void initChat(Model model) throws Exception {
+		
+		String username = CustomUserService.getUserId();
+		model.addAttribute("username", username); //key , value
+		
+	}
+
+	
 }

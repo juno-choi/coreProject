@@ -16,5 +16,6 @@ public interface JieunService {
 	public void readBoard(Model model, int idx)throws Exception;
 	public void deleteBoard(int idx)throws Exception;
 	public void updateBoard(HttpServletResponse response, HttpServletRequest request, JieunVo vo)throws Exception;
+	public void initChat(Model model)throws Exception;
 	
 }
