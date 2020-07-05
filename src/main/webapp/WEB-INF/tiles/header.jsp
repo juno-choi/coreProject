@@ -59,7 +59,7 @@
                                         <li><a>Portfolio</a>
                                             <ul class="submenu">
                                                 <li><a href="${pageContext.request.contextPath}/ch/list">이창형</a></li>
-                                                <li><a href="${pageContext.request.contextPath}/jieun/bbs">최지은</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/jieun/menu">최지은</a></li>
                                                 <li><a href="${pageContext.request.contextPath}/junho/choice">최준호</a></li>
                                             </ul>
                                         </li>

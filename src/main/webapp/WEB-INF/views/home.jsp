@@ -72,7 +72,7 @@
                                     <li><a>Portfolio</a>
                                     	<ul class="submenu">
                                         	<li><a href="${pageContext.request.contextPath}/ch/list">이창형</a></li>
-                                            	<li><a href="${pageContext.request.contextPath}/jieun/bbs">최지은</a></li>
+                                            	<li><a href="${pageContext.request.contextPath}/jieun/menu">최지은</a></li>
                                                 <li><a href="${pageContext.request.contextPath}/junho/choice">최준호</a></li>
 										</ul>
 									</li>
@@ -165,10 +165,10 @@
                             </div>
                             <div class="do-caption">
                                 <h4>최지은</h4>
-                                <p>게시판 / 네이버아이디로로그인 </p>
+                                <p>게시판 / 네이버아이디로로그인 /채팅문의기능 </p>
                             </div>
                             <div class="do-btn">
-                                <a href="${pageContext.request.contextPath}/jieun/bbs"><i class="ti-arrow-right"></i> portfolio</a>
+                                <a href="${pageContext.request.contextPath}/jieun/menu"><i class="ti-arrow-right"></i> portfolio</a>
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                                                 </div>
                                             <div class="founder-text">
                                                 <span>최지은</span>
-                                                <p>코로나 맵 / 코로나 API 기능</p>
+                                                <p>게시판 / 네이버아이디로로그인 /채팅문의기능</p>
                                             </div>
                                             </div>
                                         </div>
@@ -294,8 +294,8 @@
                                 <img src="assets/img/tips/tips_2.jpg" alt="">
                             </div>
                             <div class="tips-caption">
-                                <h4><a href="${pageContext.request.contextPath}/jieun/bbs">최지은</a></h4>
-                                <span>코로나 맵 / 코로나 API 기능</span>
+                                <h4><a href="${pageContext.request.contextPath}/jieun/menu">최지은</a></h4>
+                                <span>게시판 / 네이버아이디로로그인 /채팅문의기능</span>
                                 <p>April 22, 2020</p>
                             </div>
                         </div>

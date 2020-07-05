@@ -95,6 +95,13 @@ public class JieunController {
 		return "jieun/chat.tiles";
 	}
 	
+	@RequestMapping(value="/menu")//USERS DB
+	public String menu ()throws Exception {
+		
+		
+		return "jieun/menu.tiles";
+	}
+	
 	
 	
 	
