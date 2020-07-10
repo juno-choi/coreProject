@@ -54,11 +54,12 @@
 		</div>
   
   
-    <script src="http://182.227.105.149:3000/socket.io/socket.io.js"></script>
+    <script src="http://${filepath}:4321/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
-      	
-      var socket = io("http://182.227.105.149:3000");
+
+   	  var ioUrl = '${filepath}';
+      var socket = io("http://"+ioUrl+":4321");
       $('#chat').on('submit', function(e){ 			// # -> id 값, . -> class  
         socket.emit('send message', $('#name').val(), $('#message').val());
         $('#message').val("");

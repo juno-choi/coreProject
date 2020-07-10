@@ -13,12 +13,12 @@
 </head>
 
 <!-- socket으로 해당 ip로 연결됨 -->
-<script src="${filepath}/socket.io/socket.io.js"></script>
+<script src="http://${filepath}:5555/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 
 <script>
 $(document).ready(function(){
-	var socket = io("${filepath}");
+	var socket = io("http://${filepath}:5555");
 
 	var msg = document.querySelector('#msg');
 	var msg_process = document.querySelector('#msg_process');

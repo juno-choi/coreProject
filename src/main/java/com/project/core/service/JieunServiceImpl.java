@@ -3,7 +3,11 @@ package com.project.core.service;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
@@ -75,6 +80,14 @@ public class JieunServiceImpl implements JieunService{
 
 	@Override
 	public void initChat(Model model) throws Exception {
+		ClassPathResource resource = new ClassPathResource("/config/chatIp.txt");
+		Path path = Paths.get(resource.getURI());
+		List<String> line = Files.readAllLines(path);
+		String content = "";
+		for(int i=0; i<line.size(); i++) {
+			content += line.get(i);
+		}
+		model.addAttribute("filepath",content);
 		
 		String username = CustomUserService.getUserId();
 		model.addAttribute("username", username); //key , value
